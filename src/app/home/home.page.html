@@ -10,7 +10,8 @@
  
 <ion-row>
   <ion-col size="12">
-    <ion-segment value="default">
+    <ion-segment value="brasil" (ionChange)= "selecionarCards(            )">
+
   <ion-segment-button value="brasil">
     <ion-label>Brasil</ion-label>
   </ion-segment-button>
@@ -46,7 +47,7 @@
 </ion-row>
 
 <!-- Cards do Brasil -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'brasil' ">
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/2818895/pexels-photo-2818895.jpeg?auto=compress&cs=tinysrgb&w=1600">
@@ -70,7 +71,7 @@
 
 
 <!-- Cards da China -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'china' "> 
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/19872/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600">
@@ -93,7 +94,7 @@
 
 
 <!-- Cards da Índia -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'india' ">
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=1600">
@@ -117,7 +118,7 @@
 
 
 <!-- Cards do México -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'mexico' ">
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/12046436/pexels-photo-12046436.jpeg?auto=compress&cs=tinysrgb&w=1600">
@@ -140,7 +141,7 @@
 
 
 <!-- Cards da Jordânia -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'jordania' ">
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/720254/pexels-photo-720254.jpeg?auto=compress&cs=tinysrgb&w=1600">
@@ -163,7 +164,7 @@
 
 
 <!-- Cards da Itália -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'italia' ">
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=1600">
@@ -185,7 +186,7 @@
 
 
 <!-- Cards do Peru -->
-<ion-row>
+<ion-row *ngIf= "this.item_selecionado == 'peru' ">
   <ion-col size="4">
     <ion-card>
        <img src="https://images.pexels.com/photos/2929906/pexels-photo-2929906.jpeg?auto=compress&cs=tinysrgb&w=1600">
