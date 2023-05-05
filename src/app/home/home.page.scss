@@ -9,6 +9,12 @@ ion-card{
 
 
 img {
-  width: 100%!important;
-  height: 100%!important;
+  width: 100vh;
+  height:100%;
+  object-fit: cover;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
 }
