@@ -1,27 +1,20 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content{
+--background: rgb(0, 16, 104);
+--background: linear-gradient(100deg, rgba(2, 12, 71, 0.842), #010413bb);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+
+.imagem{
+  background-image: url('https://img.olhardigital.com.br/wp-content/uploads/2023/04/Super-Mario-Po%CC%81s-cre%CC%81ditos.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.divisor {
+  height: 50vh;
+  overflow: hidden;
+  align-items: center;
 }
