@@ -1,10 +1,20 @@
 <ion-header [translucent]="true">
-
+  <ion-title>
+    Calculadora dos cria
+  </ion-title>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <div id="container">
+
+    <ion-row>
+      <ion-col size="12" class="ion-justify-content-center">
+        <ion-textarea labelPlacement="floating" fill="outline"> {{ this.resultado }}</ion-textarea>
+      </ion-col>
+    </ion-row>
+
+
 
     <hr>
     <ion-col size="3">
@@ -14,17 +24,18 @@
     <ion-col>
       <ion-row>
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> % </ion-button>
+          <ion-button (click)="exibir(3)" expand="full" color="warning"> % </ion-button>
+
         </ion-col>
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> C </ion-button>
+          <ion-button (click)="clear()" expand="full" color="warning"> C </ion-button>
         </ion-col>
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> ⌫ </ion-button>
+          <ion-button (click)="apagar()" expand="full" color="warning"> ⌫ </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> / </ion-button>
+          <ion-button (click)="operacao('/')" expand="full" color="warning"> / </ion-button>
         </ion-col>
 
       </ion-row>
@@ -41,19 +52,20 @@
 
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium">9</ion-button>
+          <ion-button (click)="exibir(9)" expand="full" color="danger">9</ion-button>
+
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium">8</ion-button>
+          <ion-button (click)="exibir(8)" expand="full" color="danger">8</ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium">7</ion-button>
+          <ion-button (click)="exibir(7)" expand="full" color="danger">7</ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium">*</ion-button>
+          <ion-button (click)="operacao('*')" expand="full" color="secondary">*</ion-button>
         </ion-col>
 
 
@@ -63,19 +75,19 @@
     <ion-col>
       <ion-row>
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 6 </ion-button>
+          <ion-button (click)="exibir(6)" expand="full" color="danger"> 6 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 5 </ion-button>
+          <ion-button (click)="exibir(5)" expand="full" color="danger"> 5 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 4 </ion-button>
+          <ion-button (click)="exibir(4)" expand="full" color="danger"> 4 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> - </ion-button>
+          <ion-button (click)="operacao('-')" expand="full" color="danger"> - </ion-button>
         </ion-col>
 
       </ion-row>
@@ -85,19 +97,19 @@
     <ion-col>
       <ion-row>
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 3 </ion-button>
+          <ion-button (click)="exibir(3)" expand="full" color="danger"> 3 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 2 </ion-button>
+          <ion-button (click)="exibir(2)" expand="full" color="danger"> 2 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 1 </ion-button>
+          <ion-button (click)="exibir(1)" expand="full" color="danger"> 1 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> + </ion-button>
+          <ion-button (click)="operacao('+')" expand="full" color="primary"> + </ion-button>
         </ion-col>
 
 
@@ -108,13 +120,12 @@
       <ion-row>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> 0 </ion-button>
+          <ion-button (click)="exibir(0)" expand="full" color="danger"> 0 </ion-button>
         </ion-col>
 
         <ion-col size="3">
-          <ion-button expanded="full" color="medium"> = </ion-button>
+          <ion-button (click)="calcular()" expand="full" color="success"> = </ion-button>
         </ion-col>
-
 
 
       </ion-row>
